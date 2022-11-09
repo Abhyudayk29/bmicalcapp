@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'package:bmicalc/Second_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -167,7 +169,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(18.0),
                           side: BorderSide(color: Colors.yellow)))),
-              onPressed: BMI,
+              onPressed:  () {BMI();
+                Navigator.push(context,MaterialPageRoute(builder: (context){return SecondPage(bmi:bmi,);} ),);
+              },
             ),
             SizedBox(height: 15),
             Text(
